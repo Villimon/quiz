@@ -1,0 +1,114 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+
+#root {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color:rgb(165, 148, 148);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 500px;
+    background-color: #fff;  
+    border-radius: 20px;  
+    padding: 20px;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.game{
+    &__progress{
+        height: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        background: rgb(231, 231, 231);
+    }
+    &__scale{
+        height: 10px;
+        border-radius: 5px;
+        background: rgb(0,213,10);
+        background: linear-gradient(90deg, rgba(0,213,10,1) 0%, rgba(0,212,255,1) 100%);
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    &__list {
+        li {
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__item {
+        border:1px solid rgb(211, 210, 210);
+        padding: 10px 15px;
+        border-radius: 10px ;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+        &:hover {
+            border-color:rgb(146, 145, 145);
+            background-color: rgb(211, 210, 210);
+        }
+    }
+}
+
+
+.result{
+    &__image {
+        display:flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        img {
+            width: 150px;
+            height: 130px;
+        }
+    }
+    &__title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 220px;
+        height: 40px;
+        background-color: rgb(235, 81, 81);
+        color:#fff;
+        border-radius: 20px;
+        font-size: 18px;
+        transition: all 0.5s ease 0s;
+        &:hover {
+            background-color: rgb(233, 56, 56);
+        }
+    }
+}
+
+
+
+
